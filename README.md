@@ -1,8 +1,6 @@
-
 # Event Pro Banco de dados
 
 Este projeto foi desenvolvido como parte de um trabalho acadêmico para a disciplina de Banco de Dados. O objetivo do projeto é criar um sistema de gerenciamento de eventos para uma empresa fictícia chamada "EventPro".
-
 
 ## Estudo de caso
 
@@ -29,8 +27,10 @@ palestras em várias sessões e uma sessão pode ter vários palestrantes.
 ## Desenvolvimento do Trabalho
 
 Baseado no estudo de caso atribuído à equipe, os seguintes itens devem ser apresentados:
+
 - Um M.E.R.: a equipe deverá produzir um M.E.R. que represente adequadamente o domínio escolhido, atendendo às informações e restrições impostas pelo estudo de caso e que devem ser consideradas por um BD. Durante a apresentação, a equipe deverá justificar suas escolhas pelas representações do diagrama. Além disto, esclarecimentos sobre estas escolhas poderão ser solicitados pela professora ou pela turma durante a apresentação. Deverá ser usada a notação vista em sala de aula para a representação de um M.E.R..
-- Um esquema relacional: a equipe deverá converter o M.E.R. para um esquema relacional. Durante a apresentação, a equipe deverá justificar suas escolhas pelas representações no esquema relacional. Além disto, esclarecimentos sobre estas escolhas poderão ser solicitados pela professora ou pela turma durante a apresentação. 
+  ![Modelo de entidade relacional](https://raw.githubusercontent.com/SamuelTobiasFitzlaff/Event-Pro-BAN/master/MER.png)
+- Um esquema relacional: a equipe deverá converter o M.E.R. para um esquema relacional. Durante a apresentação, a equipe deverá justificar suas escolhas pelas representações no esquema relacional. Além disto, esclarecimentos sobre estas escolhas poderão ser solicitados pela professora ou pela turma durante a apresentação.
 - Consultas escritas em SQL: elaborar 3 consultas que a equipe julgar interessante para o estudo de caso e apresentar o resultado da consulta na ferramenta MySQL, no momento da apresentação. Portanto, é importante que as tabelas sejam populadas antecipadamente.
 
 ## Exigências
@@ -41,6 +41,7 @@ dos esquemas. A equipe poderá incrementar seus esquemas considerando novas info
 ## Avaliação
 
 Serão avaliados os seguintes pontos:
+
 - A boa estruturação dos esquemas M.E.R. e Relacional;
 - O cumprimento de todas as exigências acima;
 - O grau de utilização dos conceitos vistos na disciplina de BAN;
@@ -52,4 +53,3 @@ Serão avaliados os seguintes pontos:
 ## Contribuição
 
 Este projeto foi desenvolvido como parte de um trabalho acadêmico e não está aberto para contribuições externas.
-
