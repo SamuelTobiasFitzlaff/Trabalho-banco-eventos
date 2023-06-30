@@ -111,12 +111,12 @@ Serão avaliados os seguintes pontos:
 
 ### Consultas SQL
 
-[Consultas SQL](SQL/Consultas.sql)
+- [Consultas SQL](SQL/Consultas.sql)
 
 ### Outros
 
-[Criação das tabelas](SQL/Cria%C3%A7%C3%A3o%20das%20tabelas.sql)
-[Popular dados](SQL/Popular%20dados.sql)
+- [Criação das tabelas](SQL/Cria%C3%A7%C3%A3o%20das%20tabelas.sql)
+- [Popular dados](SQL/Popular%20dados.sql)
 
 ## Contribuição
 
