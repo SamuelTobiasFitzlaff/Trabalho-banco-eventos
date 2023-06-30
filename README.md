@@ -29,7 +29,6 @@ palestras em várias sessões e uma sessão pode ter vários palestrantes.
 Baseado no estudo de caso atribuído à equipe, os seguintes itens devem ser apresentados:
 
 - Um M.E.R.: a equipe deverá produzir um M.E.R. que represente adequadamente o domínio escolhido, atendendo às informações e restrições impostas pelo estudo de caso e que devem ser consideradas por um BD. Durante a apresentação, a equipe deverá justificar suas escolhas pelas representações do diagrama. Além disto, esclarecimentos sobre estas escolhas poderão ser solicitados pela professora ou pela turma durante a apresentação. Deverá ser usada a notação vista em sala de aula para a representação de um M.E.R..
-  ![Modelo de entidade relacional](MER.png)
 - Um esquema relacional: a equipe deverá converter o M.E.R. para um esquema relacional. Durante a apresentação, a equipe deverá justificar suas escolhas pelas representações no esquema relacional. Além disto, esclarecimentos sobre estas escolhas poderão ser solicitados pela professora ou pela turma durante a apresentação.
 - Consultas escritas em SQL: elaborar 3 consultas que a equipe julgar interessante para o estudo de caso e apresentar o resultado da consulta na ferramenta MySQL, no momento da apresentação. Portanto, é importante que as tabelas sejam populadas antecipadamente.
 
@@ -49,6 +48,70 @@ Serão avaliados os seguintes pontos:
 - A pertinência dos esclarecimentos da apresentação oral;
 - A clareza e organização da apresentação;
 - O grau de complexidade e importância para o estudo de caso das consultas SQL elaboradas pela equipe.
+
+## Desenvolvimento do trabalho
+
+### M. E. R.
+
+![Modelo de entidade relacional](MER.png)
+
+### Esquema Relacional
+
+- Categorias
+
+  - categoria_id (INT, PRIMARY KEY)
+  - nome_categoria (VARCHAR(255))
+
+- Eventos
+
+  - evento_id (INT, PRIMARY KEY)
+  - nome (VARCHAR(255))
+  - descricao (VARCHAR(255))
+  - data_inicio (DATE)
+  - data_fim (DATE)
+  - local (VARCHAR(255))
+  - informacoes_adicionais (VARCHAR(255))
+  - categoria_id (INT, FOREIGN KEY REFERENCES Categorias(categoria_id))
+
+- Participantes
+
+  - participante_id (INT, PRIMARY KEY)
+  - nome (VARCHAR(255))
+  - endereco (VARCHAR(255))
+  - informacoes_contato (VARCHAR(255))
+
+- Evento_Participantes
+
+  - evento_id (INT, FOREIGN KEY REFERENCES Eventos(evento_id))
+  - participante_id (INT, FOREIGN KEY REFERENCES Participantes(participante_id))
+  - PRIMARY KEY (evento_id, participante_id)
+
+- Sessoes
+
+  - sessao_id (INT, PRIMARY KEY)
+  - titulo (VARCHAR(255))
+  - descricao (VARCHAR(255))
+  - hora_inicio (TIME)
+  - hora_fim (TIME)
+  - local (VARCHAR(255))
+  - evento_id (INT, FOREIGN KEY REFERENCES Eventos(evento_id))
+
+- Palestrantes
+
+  - palestrante_id (INT, PRIMARY KEY)
+  - nome (VARCHAR(255))
+  - biografia (TEXT)
+  - informacoes_contato (VARCHAR(255))
+
+- Sessao_Palestrantes
+
+  - sessao_id (INT, FOREIGN KEY REFERENCES Sessoes(sessao_id))
+  - palestrante_id (INT, FOREIGN KEY REFERENCES Palestrantes(palestrante_id))
+  - PRIMARY KEY (sessao_id, palestrante_id)
+
+### Consultas SQL
+
+[a relative link](SQL/Consultas.sql)
 
 ## Contribuição
 
