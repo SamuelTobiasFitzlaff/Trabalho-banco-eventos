@@ -111,7 +111,7 @@ Serão avaliados os seguintes pontos:
 
 ### Consultas SQL
 
-[a relative link](SQL/Consultas.sql)
+[Consultas SQL](SQL/Consultas.sql)
 
 ## Contribuição
 
