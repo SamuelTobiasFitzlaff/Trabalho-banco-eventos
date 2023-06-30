@@ -57,57 +57,13 @@ Serão avaliados os seguintes pontos:
 
 ### Esquema Relacional
 
-- Categorias
-
-  - categoria_id (INT, PRIMARY KEY)
-  - nome_categoria (VARCHAR(255))
-
-- Eventos
-
-  - evento_id (INT, PRIMARY KEY)
-  - nome (VARCHAR(255))
-  - descricao (VARCHAR(255))
-  - data_inicio (DATE)
-  - data_fim (DATE)
-  - local (VARCHAR(255))
-  - informacoes_adicionais (VARCHAR(255))
-  - categoria_id (INT, FOREIGN KEY REFERENCES Categorias(categoria_id))
-
-- Participantes
-
-  - participante_id (INT, PRIMARY KEY)
-  - nome (VARCHAR(255))
-  - endereco (VARCHAR(255))
-  - informacoes_contato (VARCHAR(255))
-
-- Evento_Participantes
-
-  - evento_id (INT, FOREIGN KEY REFERENCES Eventos(evento_id))
-  - participante_id (INT, FOREIGN KEY REFERENCES Participantes(participante_id))
-  - PRIMARY KEY (evento_id, participante_id)
-
-- Sessoes
-
-  - sessao_id (INT, PRIMARY KEY)
-  - titulo (VARCHAR(255))
-  - descricao (VARCHAR(255))
-  - hora_inicio (TIME)
-  - hora_fim (TIME)
-  - local (VARCHAR(255))
-  - evento_id (INT, FOREIGN KEY REFERENCES Eventos(evento_id))
-
-- Palestrantes
-
-  - palestrante_id (INT, PRIMARY KEY)
-  - nome (VARCHAR(255))
-  - biografia (TEXT)
-  - informacoes_contato (VARCHAR(255))
-
-- Sessao_Palestrantes
-
-  - sessao_id (INT, FOREIGN KEY REFERENCES Sessoes(sessao_id))
-  - palestrante_id (INT, FOREIGN KEY REFERENCES Palestrantes(palestrante_id))
-  - PRIMARY KEY (sessao_id, palestrante_id)
+- Categorias (#categoria_id, nome_categoria)
+- Eventos (#evento_id, nome, descricao, data_inicio, data_fim, local, informacoes_adicionais, &categoria_id)
+- Participantes (#participante_id, nome, endereco, informacoes_contato)
+- Evento_Participantes (#&evento_id, #&participante_id)
+- Sessoes (#sessao_id, titulo, descricao, hora_inicio, hora_fim, local, &evento_id)
+- Palestrantes (#palestrante_id, nome, biografia, informacoes_contato)
+- Sessao_Palestrantes (#&sessao_id, #&palestrante_id)
 
 ### Consultas SQL
 
